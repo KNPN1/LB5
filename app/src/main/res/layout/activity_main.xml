@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/zadnie_fon"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewLogoCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circle_background" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="269dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="71dp"
+        app:layout_constraintBottom_toTopOf="@id/imageprevious"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageprevious"
+        android:onClick="privious"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginBottom="157dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageplay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:srcCompat="@drawable/gtay_skip_previous_24" />
+
+    <ImageView
+        android:id="@+id/imagenext"
+        android:onClick="next"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="157dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageplay"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:srcCompat="@drawable/gray_skip_next_24" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="305dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="Snow White (Radio Edit; Alive)"
+        android:textColor="#37627E"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogoCircle" />
+
+    <ImageView
+        android:id="@+id/imageplay"
+        android:onClick="play"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="157dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imagenext"
+        app:layout_constraintStart_toEndOf="@id/imageprevious"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:srcCompat="@drawable/gray_play_circle_24" />
+
+    <ImageView
+        android:id="@+id/imagenote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-125dp"
+        android:layout_marginTop="-125dp"
+        android:layout_marginEnd="-125dp"
+        android:layout_marginBottom="-125dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewLogoCircle"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewLogoCircle"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLogoCircle"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogoCircle"
+        app:srcCompat="@drawable/cian_music_note_100" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
